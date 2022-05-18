@@ -1,0 +1,55 @@
+#!name= Profile
+
+[General]
+skip-proxy = iosapps.itunes.apple.com
+
+[URL Rewrite]
+# 知乎（部分替换为手机百度 Quark 的 User-Agent）
+^https?:\/\/www\.zhihu\.com header-replace User-Agent Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)
+
+[Script]
+# 京东比价通知版
+http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jdjf_price.js, tag=京东比价Lite(通知版)
+
+# 百度（全站替换为手机百度 Quark 的 User-Agent）
+http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/BaiduChangeUA.js, tag=BaiduChangeUA
+
+# 微信去广告
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js, tag=微信去广告
+
+# 解除微信链接限制
+http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js, requires-body=true, timeout=10, tag=解除微信链接限制
+
+# > vsco
+http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$ script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/vsco.js, requires-body=true, tag=VSCO
+
+# TF 下载
+http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js, tag=TF区域限制解除
+
+# EmbyPremiere
+http-response ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) requires-body=1, script-path= https://subweb.s3.fr-par.scw.cloud/Script/embycrack.js, tag=EMBY
+;http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=1,  script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Emby.js, tag=EMBY
+
+# WPS (By eHpo)
+;http-response ^https?:\/\/account\.wps\.cn\/api\/users requires-body=1,  script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js, tag=WPS会员
+http-response ^https://account.wps.cn/api/users/ requires-body=1,  script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js, tag=WPS会员
+
+# 扫描全能王 pro
+http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,  script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js, tag=扫描全能王pro
+
+# Nicegram解鎖會員權限（2022-04-10）@ddgksf2013
+http-response ^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} requires-body=1,  script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/nicegram_body.js, tag=Nicegram会员
+
+# PdfExpert Pro 解锁会员权限（2022-03-26）@ddgksf2013：无需登录，会员恢复成功后，建议关闭PdfExpert应用的联网权限🔴
+http-response ^https?:\/\/license\.pdfexpert\.com\/api\/\d\.\d\/\w{9}\d\/\w{12}\/(state$|refresh$|check$) requires-body=1,  script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/pdfexpert.js, tag=PdfExpert Pro
+
+# Notability（2021-11-02）@ddgksf2013
+http-response ^https://notability.com/subscriptions requires-body=1,  script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/notability.js, tag=Notability
+
+# Symbolab 解锁订阅（2022-03-22）
+http-response ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ requires-body=1,  script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/symbolab.js, tag=Symbolab解锁订阅
+
+# Photoshop（2021-03-21） by ddgksf2013
+http-response ^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ requires-body=1,  script-path=https://raw.githubusercontent.com/28413761/QX/main/jiesuo/ps.js, tag=Photoshop
+[MITM]
+hostname = api.m.jd.com,mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, testflight.apple.com, mb3admin.com, *.baidu.com, www.zhihu.com, account.wps.cn, ap*.intsig.net, restore-access.indream.app, license.pdfexpert.com, notability.com, scibug.com, *.adobe..*,
