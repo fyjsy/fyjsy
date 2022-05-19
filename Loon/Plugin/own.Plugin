@@ -47,6 +47,8 @@ http-response https://notability.com/subscriptions requires-body=1,  script-path
 # Symbolab 解锁订阅（2022-03-22）
 http-response ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/symbolab.js, tag=Symbolab解锁订阅
 
+# 滴答清单 pro
+http-response ^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/DiDaQingDan.js, tag=滴答清单
 
 [MITM]
-hostname = api.m.jd.com,mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, testflight.apple.com, mb3admin.com, *.baidu.com, www.zhihu.com, account.wps.cn, ap*.intsig.net, restore-access.indream.app, notability.com, scibug.com
+hostname = api.m.jd.com,mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, testflight.apple.com, mb3admin.com, *.baidu.com, www.zhihu.com, account.wps.cn, ap*.intsig.net, restore-access.indream.app, notability.com, scibug.com, dida365.com, ticktick.com
