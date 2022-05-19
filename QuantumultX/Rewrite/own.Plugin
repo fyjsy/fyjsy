@@ -9,42 +9,42 @@ skip-proxy = iosapps.itunes.apple.com
 
 [Script]
 # 京东比价通知版
-http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jdjf_price.js, tag=京东比价Lite(通知版)
+http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/jdjf_price.js, tag=京东比价Lite(通知版)
 
 # 百度（全站替换为手机百度 Quark 的 User-Agent）
-http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/BaiduChangeUA.js, tag=BaiduChangeUA
+http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com, script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/BaiduChangeUA.js, tag=BaiduChangeUA
 
 # 微信去广告
-http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js, tag=微信去广告
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/Wechat.js, tag=微信去广告
 
 # 解除微信链接限制
-http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js, requires-body=true, timeout=10, tag=解除微信链接限制
+http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/UnblockURLinWeChat.js, requires-body=true, timeout=10, tag=解除微信链接限制
 
 # > vsco
-http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$ script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/vsco.js, requires-body=true, tag=VSCO
+http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$ script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/vsco.js, requires-body=true, tag=VSCO
 
 # TF 下载
-http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js, tag=TF区域限制解除
+http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/TF_Download.js, tag=TF区域限制解除
 
 # EmbyPremiere
-http-response ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) requires-body=1, script-path= https://subweb.s3.fr-par.scw.cloud/Script/embycrack.js, tag=EMBY
-;http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=1,  script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/Emby.js, tag=EMBY
+http-response ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) requires-body=1, script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/embycrack.js, tag=EMBY
+;http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/Emby.js, tag=EMBY
 
 # WPS (By eHpo)
-;http-response ^https?:\/\/account\.wps\.cn\/api\/users requires-body=1,  script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js, tag=WPS会员
-http-response ^https://account.wps.cn/api/users/ requires-body=1,  script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js, tag=WPS会员
+;http-response ^https?:\/\/account\.wps\.cn\/api\/users requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/Wps.js, tag=WPS会员
+http-response ^https://account.wps.cn/api/users/ requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/Wps.js, tag=WPS会员
 
 # 扫描全能王 pro
-http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,  script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/CamScanner.js, tag=扫描全能王pro
+http-response ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/CamScanner.js, tag=扫描全能王pro
 
 # Nicegram解鎖會員權限（2022-04-10）@ddgksf2013
-https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://github.com/ddgksf2013/Cuttlefish/raw/master/Crack/nicegram_body.js
+https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/nicegram_body.js
  
 # Notability（2021-11-02）@ddgksf2013
-http-response https://notability.com/subscriptions requires-body=1,  script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/notability.js, tag=Notability
+http-response https://notability.com/subscriptions requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/notability.js, tag=Notability
 
 # Symbolab 解锁订阅（2022-03-22）
-http-response ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ requires-body=1,  script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/symbolab.js, tag=Symbolab解锁订阅
+http-response ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/symbolab.js, tag=Symbolab解锁订阅
 
 
 [MITM]
