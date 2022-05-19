@@ -46,8 +46,8 @@ http-response ^https://notability.com/subscriptions requires-body=1,  script-pat
 # Symbolab 解锁订阅（2022-03-22）
 http-response ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ requires-body=1,  script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/symbolab.js, tag=Symbolab解锁订阅
 
-# Photoshop（2021-03-21） by ddgksf2013
-http-response ^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ requires-body=1,  script-path=https://raw.githubusercontent.com/28413761/QX/main/jiesuo/ps.js, tag=Photoshop
+#PdfExpert Pro 解锁V权限（2022-03-26）@ddgksf2013：无需登录，会员恢复成功后，🟢建议关闭PdfExpert应用的联网权限
+^https?:\/\/license\.pdfexpert\.com\/api\/\d\.\d\/\w{9}\d\/\w{12}\/(state$|refresh$|check$) url script-request-body  https://raw.githubusercontent.com/28413761/QX/main/jiesuo/pdfexpert.js
 
 [MITM]
 hostname = api.m.jd.com,mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, testflight.apple.com, mb3admin.com, *.baidu.com, www.zhihu.com, account.wps.cn, ap*.intsig.net, restore-access.indream.app, license.pdfexpert.com, notability.com, scibug.com, buy.itunes.apple.com,
