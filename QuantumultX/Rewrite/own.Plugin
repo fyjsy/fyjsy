@@ -8,6 +8,9 @@ skip-proxy = iosapps.itunes.apple.com
 ^https?:\/\/www\.zhihu\.com header-replace User-Agent Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)
 
 [Script]
+# Sub-Store
+^https?:\/\/sub\.store url script-analyze-echo-response https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js
+
 # 京东比价通知版
 http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/jdjf_price.js, tag=京东比价Lite(通知版)
 
@@ -56,4 +59,6 @@ http-response ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ requires-body=
 ^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url 302 https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/Adguard.rsp
 
 [MITM]
-hostname = api.m.jd.com,mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, testflight.apple.com, mb3admin.com, *.baidu.com, www.zhihu.com, account.wps.cn, ap*.intsig.net, restore-access.indream.app, notability.com, scibug.com, dida365.com, ticktick.com, education.github.com, mobile-api.adguard.com
+hostname = sub.stor, api.m.jd.com,mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, testflight.apple.com, mb3admin.com, *.baidu.com, www.zhihu.com, account.wps.cn, ap*.intsig.net, restore-access.indream.app, notability.com, scibug.com, dida365.com, ticktick.com, education.github.com, mobile-api.adguard.com
+
+simple_cert_hostname=sub.store
