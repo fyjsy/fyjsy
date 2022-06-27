@@ -4,13 +4,13 @@
 
 [Script]
 # 微信去广告
-http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/Wechat.js
 
 # 解除微信链接限制
 http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/UnblockURLinWeChat.js, requires-body=true, timeout=10, tag=解除微信链接限制
 
 # VSCO
-http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$  script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/vsco.js ,requires-body=true,tag=VSCO
+http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/vsco.js ,requires-body=true,tag=VSCO
 
 # EmbyPremiere
 http-response ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) requires-body=1, script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/embycrack.js, tag=EMBY
@@ -30,7 +30,7 @@ http-response https://notability.com/subscriptions requires-body=1,  script-path
 http-response ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/symbolab.js, tag=Symbolab解锁订阅
 
 # 滴答清单 pro
-http-response ^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/DiDaQingDan.js
+http-response ^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/DiDaQingDan.js, tag=滴答清单pro
 
 [MITM]
 hostname = %APPEND% mp.weixin.qq.com, weixin110.qq.com,api.revenuecat.com, mb3admin.com, account.wps.cn, ap*.intsig.net, notability.com, scibug.com, dida365.com, ticktick.com
