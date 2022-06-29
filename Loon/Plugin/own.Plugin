@@ -1,7 +1,5 @@
 #!name= Profile
 
-[General]
-skip-proxy = iosapps.itunes.apple.com
 
 [URL Rewrite]
 # 知乎（部分替换为手机百度 Quark 的 User-Agent）

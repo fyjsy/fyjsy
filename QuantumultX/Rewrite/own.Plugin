@@ -12,7 +12,7 @@ skip-proxy = iosapps.itunes.apple.com
 # ^https?:\/\/sub\.store url script-analyze-echo-response https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js
 
 # 京东比价通知版
-http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/jdjf_price.js, tag=京东比价Lite(通知版)
+# http-response ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) requires-body=true, script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/jdjf_price.js, tag=京东比价Lite(通知版)
 
 # 百度（全站替换为手机百度 Quark 的 User-Agent）
 http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com, script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/BaiduChangeUA.js, tag=BaiduChangeUA
@@ -59,4 +59,4 @@ http-response ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ requires-body=
 ^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url 302 https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/Adguard.rsp
 
 [MITM]
-hostname = api.m.jd.com,mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, mb3admin.com, *.baidu.com, www.zhihu.com, account.wps.cn, ap*.intsig.net, restore-access.indream.app, notability.com, scibug.com, dida365.com, ticktick.com, mobile-api.adguard.com
+hostname = mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, mb3admin.com, *.baidu.com, www.zhihu.com, account.wps.cn, ap*.intsig.net, restore-access.indream.app, notability.com, scibug.com, dida365.com, ticktick.com, mobile-api.adguard.com
