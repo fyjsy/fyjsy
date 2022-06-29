@@ -24,7 +24,7 @@ http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspams
 http-response ^https:\/\/api\.revenuecat\.com\/v\d\/subscribers\/\d+$ script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/vsco.js, requires-body=true, tag=VSCO
 
 # TF 下载
-http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/TF_Download.js, tag=TF区域限制解除
+# http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Script/TF_Download.js, tag=TF区域限制解除
 
 # EmbyPremiere
 http-response ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) requires-body=1, script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/embycrack.js, tag=EMBY
@@ -51,4 +51,4 @@ http-response ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ requires-body=
 http-response ^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/DiDaQingDan.js, tag=滴答清单
 
 [MITM]
-hostname = api.m.jd.com,mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, testflight.apple.com, mb3admin.com, *.baidu.com, www.zhihu.com, account.wps.cn, ap*.intsig.net, restore-access.indream.app, notability.com, scibug.com, dida365.com, ticktick.com
+hostname = api.m.jd.com,mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, mb3admin.com, *.baidu.com, www.zhihu.com, account.wps.cn, ap*.intsig.net, restore-access.indream.app, notability.com, scibug.com, dida365.com, ticktick.com
