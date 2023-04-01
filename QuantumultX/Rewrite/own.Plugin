@@ -59,7 +59,7 @@ http-response https://notability.com/subscriptions requires-body=1,  script-path
 http-response ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ requires-body=1,  script-path=https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/symbolab.js, tag=Symbolab解锁订阅
 
 # 滴答清单 pro
-^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status url script-response-body https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/DiDaQingDan.js
+#^https:\/\/(ticktick|dida365)\.com\/api\/v2\/user\/status url script-response-body https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/DiDaQingDan.js
 
 # workingcopy
 # ^https:\/\/education\.github\.com\/api\/user$ url script-response-body https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/workingcopy.js
