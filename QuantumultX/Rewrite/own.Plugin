@@ -68,4 +68,4 @@ http-response ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ requires-body=
 ;^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url 302 https://raw.githubusercontent.com/fyjsy/fyjsy/master/Crack/Adguard.rsp
 
 [MITM]
-hostname = mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, mb3admin.com, *.baidu.com, www.zhihu.com, vas.wps.cn, account.wps.cn, ap*.intsig.net, restore-access.indream.app, notability.com, scibug.com, dida365.com, ticktick.com, mobile-api.adguard.com
+hostname = mp.weixin.qq.com, weixin110.qq.com, api.revenuecat.com, mb3admin.com, *.baidu.com, www.zhihu.com, vas.wps.cn, account.wps.cn, ap*.intsig.net, restore-access.indream.app, notability.com, scibug.com, mobile-api.adguard.com
